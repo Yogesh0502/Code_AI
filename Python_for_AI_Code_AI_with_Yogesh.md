@@ -8,14 +8,14 @@ Build the Python skills needed to develop AI applications: process text and data
 This expands the foundations in your existing GenAI Zero to Production roadmap into a separate playlist. Learners who already know Python can start at HTTP or async lessons. The broader GenAI playlist can link to these prerequisites rather than repeating them.
 
 ## Format and scope
-- 32 core videos, each 10–15 minutes: approximately 7 hours of teaching.
+- 31 core videos, each 10–15 minutes: approximately 7 hours of teaching.
 - 8 optional follow-up videos, each 12–15 minutes.
 - Recommend two core videos per week: approximately 16 weeks. Three per week is an optional faster pace, about 11 weeks. These are publishing plans, not learner study requirements.
 - Plan 20–40 minutes of learner practice after each episode and 60–90 minutes after checkpoints.
 - Record the first episode today. Outline only the next four episodes in detail before polishing later scripts.
 - Explain in Hindi/Hinglish if that feels natural, retaining English names for code and technical terms. This is a suggested format, not an assumed preference.
 - Use one fictional document/chat dataset across the series and one evolving project: an AI assistant backend.
-- No paid API is needed until episode 28, and mock mode remains available afterward.
+- No paid API is needed until episode 27, and mock mode remains available afterward.
 
 ## Standard 14-minute episode structure
 | Time | Content |
@@ -30,50 +30,42 @@ This expands the foundations in your existing GenAI Zero to Production roadmap i
 
 For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minutes, split the lesson or move a secondary example into the notes. Do not accelerate the recording to fit.
 
+## Updated learning environment and numbering
+The former episode 2 is now public episode 1. Use this new numbering consistently in titles, notebook names and playlist order.
+
+Episodes 1–9 use Google Colab only. Open the prepared notebook and show how to run a cell in the first 30–45 seconds; there is no installation lesson. Run cells from top to bottom and explain that restarting the runtime requires rerunning variable definitions. Standard Python examples in these notebooks should also work locally later.
+
+Episode 9 is the conversation-cleaner mini-project in Colab. Episode 10 introduces local Python, VS Code, virtual environments and a simple code folder; migrate the same cleaner into main.py. Episode 11 then teaches modules and packages. Use VS Code for subsequent lessons.
+
 ## Core curriculum overview
-| Module | Episodes | Outcome |
+| Module | Episodes | Environment and outcome |
 |---|---|---|
-| Python fundamentals | 1–10 | A conversation-cleaning script |
-| Practical Python engineering | 11–20 | A modular, configured, tested API client |
-| Concurrent I/O | 21–22 | A bounded batch processor |
-| FastAPI for AI | 23–29 | A validated, tested AI API |
-| Capstone | 30–32 | A locally runnable, documented assistant backend |
+| Python fundamentals | 1–8 | Colab; variables through comprehensions |
+| First mini-project | 9 | Colab conversation cleaner |
+| Local development transition | 10 | VS Code, Python, venv and cleaner migration |
+| Practical Python engineering | 11–19 | Local modular, configured and tested code |
+| Concurrent I/O | 20–21 | Local bounded batch processor |
+| FastAPI for AI | 22–28 | Local validated, tested AI API |
+| Capstone | 29–31 | Documented backend and local Docker run |
 
-## Episode 01 — Setup and your first Python program
+## Episode 01 — Variables and data types in Google Colab
 
-**Target:** 12 minutes. **Suggested title:** Setup and your first Python program | Python for AI #1
-
-**Teach:** Interpreter versus editor; install Python and VS Code; select interpreter; create and run a .py file; print; comments; indentation.
-
-**Coding demo:** Print a learner name and a course welcome message.
-
-**Learner exercise:** Change the message and run the file from the terminal.
-
-**Teaching boundary / common mistake:** Do not spend the whole episode installing extensions.
-
-**Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
-
-**Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
-
-## Episode 02 — Variables and basic data types
-
-**Target:** 12 minutes. **Suggested title:** Variables and basic data types | Python for AI #2
+**Target:** 14 minutes. **Suggested title:** Variables and data types in Google Colab | Python for AI #1
 
 **Teach:** Assignment; str, int, float, bool and None; type(); conversion; input() returns text.
 
-**Coding demo:** Store model name, request count and response time; convert user input.
+**Coding demo:** Store a question, request count, sample unit cost, streaming flag and missing response; calculate a fictional request cost and convert input.
 
 **Learner exercise:** Calculate the cost of a given number of requests.
 
 **Teaching boundary / common mistake:** Distinguish None from an empty string.
 
-**Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
+**Recording allocation:** 1 minute hook and Colab cell; 7 minutes variables and types with live examples; 3 minutes conversion and input; 2 minutes practical demo; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 02 — Strings for AI applications
 
-## Episode 03 — Strings for AI applications
-
-**Target:** 14 minutes. **Suggested title:** Strings for AI applications | Python for AI #3
+**Target:** 14 minutes. **Suggested title:** Strings for AI applications | Python for AI #2
 
 **Teach:** Indexing and slicing; strip, lower, replace and split; join; f-strings; multiline strings.
 
@@ -86,10 +78,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 03 — Conditions and validation
 
-## Episode 04 — Conditions and validation
-
-**Target:** 12 minutes. **Suggested title:** Conditions and validation | Python for AI #4
+**Target:** 12 minutes. **Suggested title:** Conditions and validation | Python for AI #3
 
 **Teach:** if/elif/else; comparisons; and/or/not; truthiness; guard checks.
 
@@ -102,10 +93,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 04 — Lists and tuples
 
-## Episode 05 — Lists and tuples
-
-**Target:** 14 minutes. **Suggested title:** Lists and tuples | Python for AI #5
+**Target:** 14 minutes. **Suggested title:** Lists and tuples | Python for AI #4
 
 **Teach:** Creation; indexing; slicing; append; remove; len; ordered collections; tuple immutability.
 
@@ -118,10 +108,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 05 — Dictionaries and sets
 
-## Episode 06 — Dictionaries and sets
-
-**Target:** 14 minutes. **Suggested title:** Dictionaries and sets | Python for AI #6
+**Target:** 14 minutes. **Suggested title:** Dictionaries and sets | Python for AI #5
 
 **Teach:** Keys and values; get; update; membership; nested dictionaries; set uniqueness.
 
@@ -134,10 +123,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 06 — Loops for processing AI data
 
-## Episode 07 — Loops for processing AI data
-
-**Target:** 14 minutes. **Suggested title:** Loops for processing AI data | Python for AI #7
+**Target:** 14 minutes. **Suggested title:** Loops for processing AI data | Python for AI #6
 
 **Teach:** for; range; enumerate; items; while; break; continue; accumulators.
 
@@ -150,10 +138,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 07 — Functions: turn scripts into reusable code
 
-## Episode 08 — Functions: turn scripts into reusable code
-
-**Target:** 14 minutes. **Suggested title:** Functions: turn scripts into reusable code | Python for AI #8
+**Target:** 14 minutes. **Suggested title:** Functions: turn scripts into reusable code | Python for AI #7
 
 **Teach:** def; parameters; return; local scope; positional and keyword arguments; defaults.
 
@@ -166,10 +153,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 08 — Comprehensions and useful built-ins
 
-## Episode 09 — Comprehensions and useful built-ins
-
-**Target:** 12 minutes. **Suggested title:** Comprehensions and useful built-ins | Python for AI #9
+**Target:** 12 minutes. **Suggested title:** Comprehensions and useful built-ins | Python for AI #8
 
 **Teach:** List and dictionary comprehensions; filtering; sorted with key; zip; any/all.
 
@@ -182,10 +168,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 09 — Mini-project: conversation cleaner
 
-## Episode 10 — Mini-project: conversation cleaner
-
-**Target:** 15 minutes. **Suggested title:** Mini-project: conversation cleaner | Python for AI #10
+**Target:** 15 minutes. **Suggested title:** Mini-project: conversation cleaner | Python for AI #9
 
 **Teach:** Combine strings, collections, conditions, loops and functions; separate steps; summarize results.
 
@@ -198,6 +183,21 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 10 — Move from Colab to VS Code: Python, venv and code setup
+
+**Target:** 15 minutes. **Suggested title:** From Colab to VS Code: Python & Virtual Environments | Python for AI #10
+
+**Teach:** Why move to local development now; Python interpreter versus editor; install local Python and VS Code with Python support; select the interpreter; project folder; main.py; terminal; python -m venv .venv; Windows activation; python -m pip; installed dependencies and a requirements snapshot. Put lengthy OS-specific troubleshooting in written notes.
+
+**Coding demo:** Export or copy the episode 9 cleaner into main.py; create .venv; select its interpreter; run the cleaner locally. Use a prepared dependency example only to demonstrate isolation, explaining the cleaner itself uses no third-party packages.
+
+**Learner exercise:** Run the same input in Colab and locally and compare the result. Confirm the selected local interpreter belongs to .venv.
+
+**Teaching boundary / common mistake:** A Colab notebook runtime and a local virtual environment are different environments. Do not mix commands for different operating systems. Show Windows first and put alternatives in notes. If installation takes too long, cut download waiting and show the verified next step.
+
+**Recording allocation:** 1 minute motivation; 3 minutes installation and interpreter; 3 minutes folder and script; 4 minutes venv and interpreter selection; 2 minutes dependencies; 1 minute running the cleaner; 1 minute exercise.
+
+**Completion check:** Learner can run the conversation cleaner in VS Code inside the chosen virtual environment.
 
 ## Episode 11 — Modules and project structure
 
@@ -214,26 +214,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 12 — Files and pathlib
 
-## Episode 12 — Virtual environments and dependencies
-
-**Target:** 14 minutes. **Suggested title:** Virtual environments and dependencies | Python for AI #12
-
-**Teach:** venv; activation on Windows; python -m pip; interpreter matching; requirements; installed-version snapshot versus curated dependencies.
-
-**Coding demo:** Create an isolated project environment and reinstall dependencies.
-
-**Learner exercise:** Recreate the environment from the recorded dependency file.
-
-**Teaching boundary / common mistake:** Keep one primary workflow; mention uv only as an alternative.
-
-**Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
-
-**Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
-
-## Episode 13 — Files and pathlib
-
-**Target:** 12 minutes. **Suggested title:** Files and pathlib | Python for AI #13
+**Target:** 12 minutes. **Suggested title:** Files and pathlib | Python for AI #12
 
 **Teach:** Relative/absolute paths; Path; UTF-8; with open; read/write; file existence.
 
@@ -246,10 +229,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 13 — JSON and CSV for AI datasets
 
-## Episode 14 — JSON and CSV for AI datasets
-
-**Target:** 14 minutes. **Suggested title:** JSON and CSV for AI datasets | Python for AI #14
+**Target:** 14 minutes. **Suggested title:** JSON and CSV for AI datasets | Python for AI #13
 
 **Teach:** loads/dumps versus load/dump; nested JSON; csv.DictReader/DictWriter; Python versus JSON values.
 
@@ -262,10 +244,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 14 — Exceptions and debugging
 
-## Episode 15 — Exceptions and debugging
-
-**Target:** 14 minutes. **Suggested title:** Exceptions and debugging | Python for AI #15
+**Target:** 14 minutes. **Suggested title:** Exceptions and debugging | Python for AI #14
 
 **Teach:** Tracebacks; try/except; narrow exception types; raise; finally briefly; debugger breakpoint.
 
@@ -278,10 +259,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 15 — Type hints and dataclasses
 
-## Episode 16 — Type hints and dataclasses
-
-**Target:** 14 minutes. **Suggested title:** Type hints and dataclasses | Python for AI #16
+**Target:** 14 minutes. **Suggested title:** Type hints and dataclasses | Python for AI #15
 
 **Teach:** Parameter and return annotations; list[str]; optional values; dataclass; static versus runtime checking.
 
@@ -294,10 +274,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 16 — Classes and composition
 
-## Episode 17 — Classes and composition
-
-**Target:** 14 minutes. **Suggested title:** Classes and composition | Python for AI #17
+**Target:** 14 minutes. **Suggested title:** Classes and composition | Python for AI #16
 
 **Teach:** Instance; __init__; self; methods; instance state; compose objects; why inheritance can wait.
 
@@ -310,10 +289,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 17 — HTTP and consuming an API
 
-## Episode 18 — HTTP and consuming an API
-
-**Target:** 15 minutes. **Suggested title:** HTTP and consuming an API | Python for AI #18
+**Target:** 15 minutes. **Suggested title:** HTTP and consuming an API | Python for AI #17
 
 **Teach:** Client/server; URL; GET/POST; headers; JSON; status codes; timeout; HTTPX synchronous client.
 
@@ -326,10 +304,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 18 — Configuration and secrets
 
-## Episode 19 — Configuration and secrets
-
-**Target:** 12 minutes. **Suggested title:** Configuration and secrets | Python for AI #19
+**Target:** 12 minutes. **Suggested title:** Configuration and secrets | Python for AI #18
 
 **Teach:** Environment variables; os.getenv; required config; local .env; .gitignore; safe example config.
 
@@ -342,10 +319,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 19 — pytest for Python application logic
 
-## Episode 20 — pytest for Python application logic
-
-**Target:** 14 minutes. **Suggested title:** pytest for Python application logic | Python for AI #20
+**Target:** 14 minutes. **Suggested title:** pytest for Python application logic | Python for AI #19
 
 **Teach:** Arrange/act/assert; test discovery; parametrization; failure messages; mock boundary concept.
 
@@ -358,10 +334,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 20 — async and await explained
 
-## Episode 21 — async and await explained
-
-**Target:** 14 minutes. **Suggested title:** async and await explained | Python for AI #21
+**Target:** 14 minutes. **Suggested title:** async and await explained | Python for AI #20
 
 **Teach:** Coroutine; event loop; await; asyncio.run; I/O waiting; blocking calls; concurrency versus parallelism.
 
@@ -374,10 +349,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 21 — Bounded concurrency and reliable API calls
 
-## Episode 22 — Bounded concurrency and reliable API calls
-
-**Target:** 15 minutes. **Suggested title:** Bounded concurrency and reliable API calls | Python for AI #22
+**Target:** 15 minutes. **Suggested title:** Bounded concurrency and reliable API calls | Python for AI #21
 
 **Teach:** Async HTTPX client; gather; semaphore; timeout; selected retries; exponential backoff; handling individual failures.
 
@@ -390,10 +364,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 22 — FastAPI: your first endpoint
 
-## Episode 23 — FastAPI: your first endpoint
-
-**Target:** 12 minutes. **Suggested title:** FastAPI: your first endpoint | Python for AI #23
+**Target:** 12 minutes. **Suggested title:** FastAPI: your first endpoint | Python for AI #22
 
 **Teach:** ASGI/Uvicorn relationship; app instance; route; GET; JSON response; local interactive docs.
 
@@ -406,10 +379,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 23 — FastAPI path and query parameters
 
-## Episode 24 — FastAPI path and query parameters
-
-**Target:** 12 minutes. **Suggested title:** FastAPI path and query parameters | Python for AI #24
+**Target:** 12 minutes. **Suggested title:** FastAPI path and query parameters | Python for AI #23
 
 **Teach:** Path versus query inputs; defaults; annotations; constrained fields; response behavior.
 
@@ -422,10 +394,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 5 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 24 — Pydantic and POST request bodies
 
-## Episode 25 — Pydantic and POST request bodies
-
-**Target:** 15 minutes. **Suggested title:** Pydantic and POST request bodies | Python for AI #25
+**Target:** 15 minutes. **Suggested title:** Pydantic and POST request bodies | Python for AI #24
 
 **Teach:** BaseModel; Field constraints; nested message model; validation errors; model_dump; request body.
 
@@ -438,10 +409,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 25 — Response models and API errors
 
-## Episode 26 — Response models and API errors
-
-**Target:** 13 minutes. **Suggested title:** Response models and API errors | Python for AI #26
+**Target:** 13 minutes. **Suggested title:** Response models and API errors | Python for AI #25
 
 **Teach:** response_model; HTTPException; status codes; predictable response shape; public versus internal fields.
 
@@ -454,10 +424,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 6 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 26 — FastAPI dependencies and service layers
 
-## Episode 27 — FastAPI dependencies and service layers
-
-**Target:** 14 minutes. **Suggested title:** FastAPI dependencies and service layers | Python for AI #27
+**Target:** 14 minutes. **Suggested title:** FastAPI dependencies and service layers | Python for AI #26
 
 **Teach:** Depends; separation of route and service logic; reusable config; provider interface; test substitution.
 
@@ -470,10 +439,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 27 — Connect a real model provider
 
-## Episode 28 — Connect a real model provider
-
-**Target:** 15 minutes. **Suggested title:** Connect a real model provider | Python for AI #28
+**Target:** 15 minutes. **Suggested title:** Connect a real model provider | Python for AI #27
 
 **Teach:** Official SDK boundary; credentials; request/response mapping; model configuration; timeout; provider error mapping; mock fallback.
 
@@ -486,10 +454,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 28 — Test a FastAPI application
 
-## Episode 29 — Test a FastAPI application
-
-**Target:** 14 minutes. **Suggested title:** Test a FastAPI application | Python for AI #29
+**Target:** 14 minutes. **Suggested title:** Test a FastAPI application | Python for AI #28
 
 **Teach:** TestClient; dependency overrides; fixtures; success and validation cases; mock provider.
 
@@ -502,10 +469,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 7 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 29 — Capstone: assemble your AI assistant backend
 
-## Episode 30 — Capstone: assemble your AI assistant backend
-
-**Target:** 15 minutes. **Suggested title:** Capstone: assemble your AI assistant backend | Python for AI #30
+**Target:** 15 minutes. **Suggested title:** Capstone: assemble your AI assistant backend | Python for AI #29
 
 **Teach:** Connect config, schema, service and routes; request flow; health endpoint; modular structure.
 
@@ -518,10 +484,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 30 — Capstone: improve reliability
 
-## Episode 31 — Capstone: improve reliability
-
-**Target:** 15 minutes. **Suggested title:** Capstone: improve reliability | Python for AI #31
+**Target:** 15 minutes. **Suggested title:** Capstone: improve reliability | Python for AI #30
 
 **Teach:** Request IDs; timing; basic structured logs; timeout mapping; input limits; test a failing provider.
 
@@ -534,10 +499,9 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
+## Episode 31 — Package and demonstrate the project
 
-## Episode 32 — Package and demonstrate the project
-
-**Target:** 15 minutes. **Suggested title:** Package and demonstrate the project | Python for AI #32
+**Target:** 15 minutes. **Suggested title:** Package and demonstrate the project | Python for AI #31
 
 **Teach:** Dockerfile concepts; dependency installation; start command; config at runtime; README; demo checklist.
 
@@ -550,7 +514,6 @@ For a 12-minute lesson, shorten the demonstration. If a dry run exceeds 15 minut
 **Recording allocation:** 1 minute problem/outcome; 8 minutes concept and example; 4 minutes focused coding; 1 minute failure case; 1 minute exercise and recap. Prepare the final code and sample output before recording.
 
 **Completion check:** The learner can reproduce the demo and complete the exercise without copying the final solution.
-
 ## Optional follow-up lessons
 
 Publish these after the core series, or as separate branches when viewers need them. Each is 12–15 minutes and requires the relevant core lessons.
@@ -603,79 +566,45 @@ Publish these after the core series, or as separate branches when viewers need t
 
 **Exercise:** Compare a small CPU-bound and I/O-bound example.
 
-## First video: record today
+## First video: variables and data types in Colab
 
-**Title:** Python for AI Developers #1: Setup & Your First Program
+**Title:** Python for AI #1: Variables & Data Types | Google Colab
 
-**Thumbnail:** PYTHON FOR AI / START HERE
+**Thumbnail:** PYTHON FOR AI / VARIABLES & TYPES
 
-**Outcome:** The viewer runs a Python file and understands how it fits into the larger AI development journey.
+**Companion:** Episode_01_Variables_Data_Types_Script.md and Episode_01_Variables_Data_Types.ipynb. This lesson corresponds to episode 2 in the original draft.
 
-| Time | Recording content |
-|---|---|
-| 0:00–0:30 | Show the future assistant API for a few seconds, then today's welcome-message output. Label the API as a preview, not today's build. |
-| 0:30–1:15 | Explain the promise: learn Python, process documents, call a model, and build an API. |
-| 1:15–2:15 | Show the five modules and final project. Keep ML, RAG and agents as the next learning stage. |
-| 2:15–5:15 | Install/select Python, create a folder, select the interpreter in VS Code and verify Python in the terminal. Use a clean demo setup. |
-| 5:15–8:30 | Create main.py, print the channel welcome, add a comment, change a message, and rerun. |
-| 8:30–10:00 | Explain editor versus interpreter, file versus terminal, and demonstrate one simple syntax error. |
-| 10:00–11:00 | Exercise: print the viewer's name and why they want to learn AI. |
-| 11:00–12:00 | Recap; point to variables and data types in episode 2. |
-
-Do not introduce functions, packages or model API calls in the first coding demo. Show a brief final-project preview from prepared material only if it is ready; a simple screenshot or explanation is sufficient.
-
-### Today's preparation and recording block
-| Task | Suggested time |
-|---|---:|
-| Write six talking points and prepare the first script | 20 min |
-| Verify the setup flow and code | 25 min |
-| Make a roadmap slide and prepare the screen | 15 min |
-| Record a 30-second audio/readability sample | 10 min |
-| Record in short sections | 25–35 min |
-| Trim pauses; add title, chapters and thumbnail | 40–60 min |
-| Watch once and publish when ready | 15 min |
-
-Budget around 2.5–3 hours; first-time tool setup may require more. Prioritize clear audio and readable code over transitions.
+Record 13–15 minutes including live typing and pauses. Begin with a practical question: how does Python represent a user's question, number of requests, sample cost, streaming choice and a response that has not arrived? Teach assignment, print, naming, str/int/float/bool/None, type, reassignment, conversion and input. End with a fictional request-cost calculation and an exercise. There is no installation segment.
 
 ## Sustainable production routine
-
-Aim for 4–6 hours weekly for two short videos once the workflow is familiar; allow more during the first weeks. Suggested routine: Monday outline both (30–45 min), Tuesday prepare and test code (60–90 min), Wednesday dry run and diagrams (30 min), Thursday record the first (30–45 min), Friday edit/publish the first (45–60 min), Saturday record/edit the second (60–90 min), Sunday publish/review and rest (15–30 min). Reduce to one video per week if quality or family time suffers; the sequence does not change.
-
-Prepare a two-video buffer before committing to a public schedule. After four episodes, inspect recurring learner questions and where viewers leave; adjust pacing rather than rewriting the whole course.
+Plan two short videos weekly, approximately 16 weeks for 31 core videos. Allow 4–6 hours weekly once the workflow is familiar, more at first. Outline both; test the notebooks or scripts; record in short sections; edit and publish; review questions. Keep a two-video buffer where possible. One video per week is fine if job or family time requires it.
 
 ## Project progression
-1. Episode 10: conversation cleaner using synthetic records.
-2. Episode 20: modular client with config and unit tests.
-3. Episode 22: concurrent batch processor against mock services.
-4. Episode 29: validated FastAPI /chat endpoint with mocked tests.
-5. Episode 32: documented assistant backend with /health and /chat, optional real provider, request IDs, tests and local Docker run.
+1. Episode 9: synthetic conversation cleaner in Colab.
+2. Episode 10: migrate the cleaner to VS Code and .venv.
+3. Episode 19: modular client and unit tests.
+4. Episode 21: concurrent processor against mock services.
+5. Episode 28: validated FastAPI /chat with mocked tests.
+6. Episode 31: documented assistant backend with request IDs, tests and local Docker run.
 
-The final project is a teaching backend. Database persistence, authentication, durable queues, distributed rate limiting and public deployment belong in later lessons. Do not describe it as production-ready.
+The capstone is a teaching backend. Database persistence, authentication, durable queues, distributed rate limiting and public deployment need later lessons.
 
-## Teaching repository plan
-Use one repository, for example python-for-ai-with-yogesh. Provide episode-specific starter and finished folders or tags; learners should be able to start an episode without depending on your unpublished local work. Include README.md, the tested Python version, dependencies, .env.example with placeholders, sample synthetic data, exercises, solutions and a license of your choice. Add clear Windows instructions first and short macOS/Linux alternatives where commands differ.
+## Teaching materials and repository
+For episodes 1–9, provide a Colab-compatible .ipynb for each episode with objectives, code cells, expected output and an exercise. Make a separate copy before editing during recording. Explain top-to-bottom execution and run from a fresh runtime before publication. An unexpected NameError may simply mean a defining cell was not run.
 
-Before publishing: run the episode from a fresh environment; verify commands; pin third-party versions used in the demo; check current official documentation; confirm all keys and personal information are hidden. Later SDK changes should get a dated note or small correction video.
+From episode 10, provide episode-specific starter and finished code, README, tested Python version, dependencies and Windows-first commands. Supply .env.example with placeholders only. Learners should be able to join at an episode without unpublished files. Keep the original notebooks available as a reference.
 
 ## Publication checklist
-- [ ] One learning outcome and a runnable example
-- [ ] Tested code and exercise with solution
-- [ ] Readable editor zoom; notifications off
-- [ ] Clear audio sample checked
+- [ ] One outcome, runnable code and an exercise
+- [ ] Notebook runs top to bottom, or local setup works from a fresh environment
+- [ ] Recording uses the revised episode number
+- [ ] Clear audio, readable code, notifications off
 - [ ] Final video between 10 and 15 minutes
-- [ ] Specific title and consistent episode number
-- [ ] Thumbnail with one concept, not a list of technologies
-- [ ] Description links to playlist, code, prerequisites and exercise
-- [ ] Chapters and subtitles reviewed
-- [ ] Next-lesson link added when available
+- [ ] No real secrets or private examples on screen
+- [ ] Description contains playlist, notebook/code, chapters and prerequisites
+- [ ] Captions reviewed and next-video link updated when available
 
-## Material to defer
-Deep metaclasses, advanced inheritance, exhaustive DSA, full Pandas coverage, a full Django course, cloud certifications, distributed systems and model-training frameworks would expand the scope substantially. Add them only when the project or a separate learning track needs them. For ML/model-training learners, a later NumPy, Pandas and PyTorch track is necessary.
+## Scope and references
+Continue to focus on AI application engineering. Exhaustive DSA, metaclasses, deep inheritance, full data science and cloud training belong elsewhere. Add NumPy/Pandas/PyTorch depth later for ML and model training.
 
-## Official teaching references
-- Python tutorial: https://docs.python.org/3/tutorial/
-- FastAPI request bodies: https://fastapi.tiangolo.com/tutorial/body/
-- FastAPI testing: https://fastapi.tiangolo.com/tutorial/testing/
-
-Use these as preparation references, adapting the explanation to complete beginners. The official Python tutorial itself assumes basic programming understanding.
-
+Official preparation references: https://docs.python.org/3/tutorial/ ; https://fastapi.tiangolo.com/tutorial/body/ ; https://fastapi.tiangolo.com/tutorial/testing/ . Verify third-party APIs and package versions when preparing the relevant recording.
