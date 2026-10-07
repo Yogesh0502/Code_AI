@@ -3,7 +3,8 @@
 **Channel:** Code AI with Yogesh  
 **Public episode:** 1 (episode 2 in the original plan)  
 **Title:** Python for AI #1: Variables & Data Types | Google Colab  
-**Language:** conversational Hinglish; English technical terms  
+**Language:** conversational English
+
 **Target:** 13–15 minutes, including typing, running cells, prediction pauses and explanations. Timings are rehearsal targets rather than exact spoken durations.
 
 ## Recording preparation
@@ -18,19 +19,19 @@ Today's objective: represent simple AI application data correctly, inspect its t
 
 **Say:**
 
-“Agar aap AI developer banna chahte hain, toh aapko Python mein sab kuch ek saath seekhne ki zaroorat nahi hai. Lekin jo code aap likh rahe hain, usmein data kaise represent ho raha hai, yeh samajhna zaroori hai.
+“If you want to become an AI developer, you do not need to learn everything in Python at once. But you do need to understand how the data in your code is represented.
 
-Ek AI app mein user ka question text hota hai, requests ki count number hoti hai, aur streaming on ya off ho sakti hai. Aaj hum isi data ko Python mein represent karenge.
+In an AI application, a user's question is text, a request count is a number, and streaming can be on or off. Today, we will represent that data in Python.
 
-Hi, main Yogesh hoon, aur welcome to Code AI with Yogesh. Yeh Python for AI Developers series ka first video hai. Aaj variables, basic data types aur ek chhota practical example karenge.”
+Hi, I’m Yogesh, and welcome to Code AI with Yogesh. This is the first video in the Python for AI Developers series. Today, we will cover variables, basic data types, and a small practical example.”
 
 ## 0:45–1:15 — Start coding in Colab
 
 **Say:**
 
-“Abhi hum Google Colab use karenge. Aap description mein diye notebook ko open karke saath mein practice kar sakte hain. Installation baad mein karenge, jab hum local projects banayenge.
+“For now, we will use Google Colab. You can open the notebook linked in the description and practise along with me. We will cover installation later, when we build local projects.
 
-Yeh ek code cell hai. Ismein Python code likhenge aur run button se execute karenge. Pehle ek message print karte hain.”
+This is a code cell. We write Python code here and execute it with the Run button. Let’s start by printing a message.”
 
 **Type and run:**
 
@@ -38,7 +39,7 @@ Yeh ek code cell hai. Ismein Python code likhenge aur run button se execute kare
 print("Welcome to Code AI with Yogesh")
 ```
 
-**Say:** “print ek built-in function hai jo output dikhata hai. Functions ki detail hum upcoming lesson mein karenge.”
+**Say:** “`print` is a built-in function that displays output. We will cover functions in detail in a later lesson.”
 
 ## 1:15–3:15 — What is a variable?
 
@@ -51,11 +52,11 @@ print(question)
 
 **Say:**
 
-“Yahan question variable ka naam hai, aur quotes ke andar text uski value hai. Equals sign yahan assignment karta hai: right side ki value ko left side ke naam se bind karta hai.
+“Here, `question` is the variable name, and the text inside the quotes is its value. The equals sign performs assignment: it binds the value on the right to the name on the left.
 
-Beginner level par aap variable ko data ka label samajh sakte hain. Thoda precisely, Python mein variable ek naam hai jo kisi object ko refer karta hai. Ab jab main print ke andar question likhta hoon, Python us naam ki value dikhata hai.
+At a beginner level, you can think of a variable as a label for data. More precisely, in Python a variable is a name that refers to an object. When I write `question` inside `print`, Python displays the value associated with that name.
 
-Iska fayda kya hai? Agar mujhe yeh question multiple jagah use karna ho, toh main same text baar-baar likhne ki jagah variable use kar sakta hoon.”
+Why is that useful? If I need to use this question in several places, I can use the variable instead of writing the same text repeatedly.”
 
 **Type and run:**
 
@@ -66,15 +67,15 @@ print(question)
 
 **Say:**
 
-“Ab humne question ko ek new value assign ki. Output bhi change ho gaya. Assignment pehle hota hai, phir print current value dikhata hai.
+“Now we have assigned a new value to `question`, so the output changes too. Assignment happens first; then `print` displays the current value.
 
-Naam meaningful rakhiye: question, request_count, response_time. Naam mein spaces nahi hote, digit se start nahi karte, aur Python ke reserved words use nahi karte. Multiple words ke liye underscore useful hai. Python case-sensitive hai: question aur Question alag names hain.”
+Choose meaningful names: `question`, `request_count`, and `response_time`. Names cannot contain spaces, cannot start with a digit, and cannot use Python reserved words. An underscore is useful for multiple words. Python is case-sensitive, so `question` and `Question` are different names.”
 
 **Pause:** Ask the viewer to predict the second output before running it. Avoid a detour into memory addresses or object identity.
 
 ## 3:15–6:45 — Five useful types
 
-**Say:** “Ab values alag tarah ki ho sakti hain. Inka type decide karta hai ki hum unke saath kaunsi operations kar sakte hain.”
+**Say:** “Values can have different types. Their type determines which operations we can perform with them.”
 
 **Type in one cell:**
 
@@ -88,15 +89,15 @@ response = None
 
 **Explain one line at a time:**
 
-“question mein text hai. Python mein text ka type str, ya string, hota hai. String single ya double quotes mein likh sakte hain.
+“`question` contains text. In Python, the type for text is `str`, or string. You can write strings with single or double quotes.
 
-request_count mein 5 hai. Yeh whole number hai, iska type int hai. Request count, document count, page count: inke liye integers useful hote hain.
+`request_count` contains 5. This is a whole number, so its type is `int`. Integers are useful for request counts, document counts, and page counts.
 
-cost_per_request mein 0.20 hai. Decimal value ko yahan float ke roop mein represent kiya gaya hai. Response time ya sample cost jaise examples mein float use kar sakte hain. Yeh number sirf learning ke liye hai, kisi model ki actual pricing nahi hai.
+`cost_per_request` contains 0.20. This decimal value is represented as a `float`. You can use floats for examples such as response time or a sample cost. This number is only for learning; it is not the actual price of any model.
 
-streaming_enabled True hai. True aur False boolean values hain. Inka type bool hota hai. Capital T aur capital F dhyaan rakhiye. Yeh abhi bas ek flag hai; isse humne streaming implement nahi ki hai.
+`streaming_enabled` is `True`. `True` and `False` are Boolean values, with the type `bool`. Notice the capital T and capital F. This is only a flag for now; we have not implemented streaming.
 
-response None hai. Is example mein iska meaning hai: abhi response available nahi hai. None, empty string aur zero alag values hain. None ka type NoneType hai.”
+`response` is `None`. In this example, that means a response is not available yet. `None`, an empty string, and zero are different values. The type of `None` is `NoneType`.”
 
 **Type and run:**
 
@@ -118,7 +119,7 @@ print(type(response))
 <class 'NoneType'>
 ```
 
-**Say:** “type se hum check kar sakte hain ki actual value kis type ki hai. Aapko class ki detail abhi nahi chahiye; yahan output ka last naam dekhiye.”
+**Say:** “We can use `type` to check a value’s actual type. You do not need to understand classes yet; just look at the final name in each output.”
 
 **Checkpoint:** Point at each value and let the viewer name its type. Later lessons cover lists and dictionaries; do not preview their syntax here.
 
@@ -138,11 +139,11 @@ print(request_count_text + "2")
 
 **Say:**
 
-“Dono values dekhne mein 5 lag sakti hain, lekin quotes wali value string hai. Integer ke saath plus arithmetic addition karta hai: 5 plus 2 equals 7.
+“Both values may look like 5, but the value in quotes is a string. With integers, plus performs arithmetic addition: 5 plus 2 equals 7.
 
-Do strings ke saath plus unko join karta hai. Isliye string 5 aur string 2 ka result 52 hai. Yeh addition nahi, concatenation hai.
+With two strings, plus joins them. That is why string 5 and string 2 produce 52. This is concatenation, not addition.
 
-Isliye sirf output dekhkar type assume mat kijiye. Quotes aur type check important hain.”
+So do not assume a type from its displayed output alone. Quotes and type checks matter.”
 
 **Brief additional example:**
 
@@ -151,7 +152,7 @@ print(type(True))
 print(type("True"))
 ```
 
-**Say:** “True boolean hai; quotes ke andar True text hai.”
+**Say:** “`True` is a Boolean; `"True"` in quotes is text.”
 
 ## 8:00–9:45 — Type conversion and user input
 
@@ -168,7 +169,7 @@ print(sample_cost)
 
 **Say:**
 
-“Jab numeric data text ke form mein aata hai, hum usse convert kar sakte hain. int string 5 ko integer 5 banata hai. float decimal text ko floating-point number banata hai. Conversion tabhi successful hogi jab text valid ho. int ke andar five word denge toh woh valid integer nahi hai.”
+“When numeric data arrives as text, we can convert it. `int` turns the string `"5"` into the integer `5`. `float` turns decimal text into a floating-point number. Conversion succeeds only when the text is valid. For example, the word `five` is not a valid integer.”
 
 **Type and run; enter 10 when prompted:**
 
@@ -182,7 +183,7 @@ print(type(request_count))
 
 **Say:**
 
-“input user se value leta hai, lekin return string karta hai, chahe aapne digits type kiye hon. Isliye calculation se pehle hum int mein convert kar rahe hain. Abhi valid whole number enter kariye. Invalid input ko safely handle karna hum conditions aur exceptions mein seekhenge.”
+“`input` gets a value from the user, but it returns a string even if you enter digits. That is why we convert it to an integer before calculating. Enter a valid whole number for now. We will learn how to handle invalid input safely when we cover conditions and exceptions.”
 
 **Stage direction:** Show the conversion error only if there is time; keep it in a separate cell so it does not stop the practical demo. Do not teach exception syntax yet.
 
@@ -190,7 +191,7 @@ print(type(request_count))
 
 **Say:**
 
-“Ab ek chhota practical example banate hain. Suppose ek fictional service mein har request ki cost 0.20 rupees hai. User requests ki count enter karega aur hum total calculate karenge. Real LLM services mein pricing provider aur token usage par depend kar sakti hai; yeh sirf Python practice ka fixed-cost example hai.”
+“Now let’s build a small practical example. Suppose a fictional service costs 0.20 rupees per request. The user will enter the number of requests, and we will calculate the total. Pricing for real LLM services can depend on the provider and token usage; this is only a fixed-cost Python practice example.”
 
 **Type and run; enter 10:**
 
@@ -208,13 +209,13 @@ print("Total estimated cost:", total_cost)
 
 **Say:**
 
-“Pehli line mein user input ko integer mein convert kiya. Dusri mein sample decimal cost rakhi. Teesri mein multiplication ke liye star operator use kiya. Phir print mein label aur value comma se separate karke dikhaya.
+“In the first line, we converted the user input to an integer. In the second, we stored a sample decimal cost. In the third, we used the star operator for multiplication. Then we used commas in `print` to display a label and a value.
 
-Hash ke baad wali line ka hissa comment hai: code ko explain karne ke liye, Python usse execute nahi karta. Ab count 20 karke predict kariye total kya hoga.”
+The part of a line after the hash is a comment: it explains the code, but Python does not execute it. Now change the count to 20 and predict the total.”
 
 **Pause and rerun:** Show 4.0 for 20 requests.
 
-**Say:** “Yeh floats ka teaching example hai. Precise financial calculations mein rounding aur decimal representation ka dhyaan rakhna padta hai; woh aaj ke scope se bahar hai.”
+**Say:** “This is a teaching example using floats. Precise financial calculations require care with rounding and decimal representation, which is outside today’s scope.”
 
 ## 11:45–13:15 — Exercise and recap
 
@@ -222,27 +223,27 @@ Hash ke baad wali line ka hissa comment hai: code ko explain karne ke liye, Pyth
 
 **Say:**
 
-“Ab aapki practice. Video pause karke paanch variables banaiye: user_name mein apna naam, document_count mein 3, seconds_per_document mein 1.5, processing_enabled mein True, aur result mein None.
+“Now it is your turn to practise. Pause the video and create five variables: put your name in `user_name`, 3 in `document_count`, 1.5 in `seconds_per_document`, `True` in `processing_enabled`, and `None` in `result`.
 
-Sabki types print kariye. Phir document_count ko seconds_per_document se multiply karke estimated_seconds banaiye. Agar 3 documents hain aur har document ko 1.5 seconds lagte hain, estimated total kya hoga? Assume documents ek ke baad ek process ho rahe hain.”
+Print the type of each one. Then multiply `document_count` by `seconds_per_document` to create `estimated_seconds`. If there are 3 documents and each takes 1.5 seconds, what is the estimated total? Assume the documents are processed one after another.”
 
 **Pause:** Leave 5 seconds. Mention that the answer is in the notebook below the exercise, not on screen yet.
 
 **Say:**
 
-“Aaj humne dekha variable ek naam hai jo value ko refer karta hai. Text ke liye str, whole numbers ke liye int, decimals ke liye float, True/False ke liye bool, aur missing value ko represent karne ke liye None use kiya.
+“Today we saw that a variable is a name that refers to a value. We used `str` for text, `int` for whole numbers, `float` for decimals, `bool` for `True` and `False`, and `None` to represent a missing value.
 
-type se value ka type check kiya. Aur input se aaya text int ya float mein convert karke calculation ki.
+We used `type` to check a value’s type, and converted text from `input` to an `int` or `float` before calculating.
 
-Ek Colab tip: cells top to bottom run kariye. Agar runtime restart ho gaya, toh variables define karne wali cells dobara run karni hongi.”
+One Colab tip: run cells from top to bottom. If the runtime restarts, you must run the cells that define your variables again.”
 
 ## 13:15–14:00 — Next lesson and close
 
 **Say:**
 
-“Next video mein strings ko detail mein dekhenge: user ke question se extra spaces remove karna, text modify karna aur values se prompt banana.
+“In the next video, we will look at strings in more detail: removing extra spaces from a user’s question, modifying text, and building a prompt from values.
 
-Aaj ka notebook description mein hai. Exercise complete karke comment mein estimated_seconds ka result batayein. Main Yogesh, aur aap dekh rahe the Code AI with Yogesh. Milte hain next video mein.”
+Today’s notebook is linked in the description. Complete the exercise and share your `estimated_seconds` result in the comments. I’m Yogesh, and you have been watching Code AI with Yogesh. See you in the next video.”
 
 ## Notebook exercise solution — keep off screen until after the assignment
 

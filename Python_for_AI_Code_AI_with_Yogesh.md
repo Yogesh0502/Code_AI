@@ -13,7 +13,7 @@ This expands the foundations in your existing GenAI Zero to Production roadmap i
 - Recommend two core videos per week: approximately 16 weeks. Three per week is an optional faster pace, about 11 weeks. These are publishing plans, not learner study requirements.
 - Plan 20–40 minutes of learner practice after each episode and 60–90 minutes after checkpoints.
 - Record the first episode today. Outline only the next four episodes in detail before polishing later scripts.
-- Explain in Hindi/Hinglish if that feels natural, retaining English names for code and technical terms. This is a suggested format, not an assumed preference.
+- Record and teach the complete playlist in conversational English. Use clear, beginner-friendly phrasing while retaining standard Python and AI terminology.
 - Use one fictional document/chat dataset across the series and one evolving project: an AI assistant backend.
 - No paid API is needed until episode 27, and mock mode remains available afterward.
 
